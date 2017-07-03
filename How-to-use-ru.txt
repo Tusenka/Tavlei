@@ -1,0 +1,18 @@
+Server APP
+
+1) To start tavlei server, run Tavlei-server.jar. Tavlei game on the server will be available by address localhost:<your port>/game
+,where <your port> is you port, pointed in application.properties. By default it is 1558
+So, after starting Tavlei Server, by default, the game will be available at http:\\localhost:1558\game
+
+2) To shutdown the tavlei server localhost:<your port>//stop.html
+,where <your port> is you port, pointed in application.properties. By default it is 1558
+By default, stopping the server be available at http:\\localhost:1558\stop.html
+
+3) Html и JavaScript были взяты из этого чужого заброшенного проекта http://tavlei.net/pravila/ с классными рисунками.
+Были дополнены для работы различных браузерах. Добавлено взаимодейтсвие с сервером. И добавлена возможность выполнения хода одной функцией.
+Возможны баги со стороны этого javascript движка. Не потому что он плохой, а потому что он разрабытывался для других узких целей.
+Чужой javascript движок как frontend взят с исключительной целью демонстрации возможностей Java сервера. Автор счел, что этого достаточно.
+
+JAVA CLIENT
+
+3) To start fat tavlei client on PC as JavaFX application run Tavlei-clientFX.jar

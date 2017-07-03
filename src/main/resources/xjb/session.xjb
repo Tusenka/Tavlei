@@ -1,0 +1,7 @@
+<jaxb:bindings
+        version="1.0"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        jaxb:extensionBindingPrefixes="jsonix"
+        schemaLocation="../xsd/SessionHandler.xsd">
+
+</jaxb:bindings>

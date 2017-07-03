@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               jaxb:version="2.1"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               jaxb:extensionBindingPrefixes="xjc inheritance"
+               schemaLocation="../xsd/GameMechanic.xsd">
+
+    <jaxb:bindings node="//xsd:complexType[@name='PositionType']">
+        <jaxb:class ref="entity.Position"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="//xsd:complexType[@name='MoveType']">
+        <jaxb:class ref="entity.Move"/>
+    </jaxb:bindings>
+    <jaxb:bindings node="//xsd:simpleType[@name='SideType']">
+        <jaxb:class ref="entity.Side"/>
+    </jaxb:bindings>
+
+
+</jaxb:bindings>

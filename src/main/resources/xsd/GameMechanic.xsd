@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="PositionType">
+        <xs:sequence>
+            <xs:element type="xs:byte" name="row"/>
+            <xs:element type="xs:byte" name="col"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MoveType">
+        <xs:sequence>
+            <xs:element name="start" type="PositionType"/>
+            <xs:element name="destination" type="PositionType"/>
+            <xs:element name="defeated" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="position" maxOccurs="unbounded" minOccurs="0" type="PositionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="ResponseType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MAKE_TURN"/>
+            <xs:enumeration value="WIN_GAME"/>
+            <xs:enumeration value="INTERRUPT_GAME"/>
+            <xs:enumeration value="TURN_CONFIRMED"/>
+            <xs:enumeration value="TURN_UNCONFIRMED"/>
+            <xs:enumeration value="PARTNER_SEARCHING"/>
+            <xs:enumeration value="PARTNER_FOUNDED"/>
+            <xs:enumeration value="PARTNER_NOT_FOUNDED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RequestType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GAME_BEGIN"/>
+            <xs:enumeration value="MAKE_TURN"/>
+            <xs:enumeration value="GAME_END"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="GameModeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MULTILAYER"/>
+            <xs:enumeration value="PLAY_WITH_AI"/>
+            <xs:enumeration value="PLAY_FROM_ONE_COMPUTER"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SideType">
+        <xs:restriction base="xs:string">
+
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="gameMechanicRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="move" minOccurs="0" type="MoveType"/>
+                <xs:element name="mySide" minOccurs="0" type="SideType"/>
+            </xs:sequence>
+            <xs:attribute name="type" use="required" type="RequestType"/>
+            <xs:attribute name="mode" use="optional" type="GameModeType"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="gameMechanicResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="move" minOccurs="0" type="MoveType"/>
+                <xs:element name="winner" minOccurs="0" type="SideType"/>
+                <xs:element name="isStalemate" minOccurs="0" type="xs:boolean"/>
+                <xs:element name="message" minOccurs="0" type="xs:string"/>
+                <xs:element name="yourSide" minOccurs="0" type="SideType"/>
+            </xs:sequence>
+            <xs:attribute name="type" use="required" type="ResponseType"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

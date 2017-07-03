@@ -1,0 +1,17 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="sessionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sendTo" minOccurs="1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="sessionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="yourSessionId" minOccurs="1" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

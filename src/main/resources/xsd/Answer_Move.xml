@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <response type="make_turn">
+        <move>
+            <start row="9" col="10"/>
+            <destination row="9" col="10"/>
+            <defeated>
+                <position row="9" col="10"/>
+                <position row="9" col="10"/>
+                <position row="9" col="10"/>
+            </defeated>
+        </move>
+    </response>
+    <response type="win_game">
+        <winner sourceSide="attacker"/>
+    </response>
+    <response type="interrupt_game"/>
+
+    <response type="searching_partner"/>
+    <response type="partner_founded"/>
+    <response type="partner_not_founded"/>
+
+    <request type="game_begin" mode="multiplier"/>
+    <request type="game_begin" mode="play_with_ai"/>
+
+    <request type="make_turn">
+        <move>
+            <start row="9" col="10"/>
+            <destintion row="9" col="10"/>
+        </move>
+    </request>
+</root>

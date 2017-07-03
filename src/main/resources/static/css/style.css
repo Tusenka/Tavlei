@@ -1,0 +1,61 @@
+body {
+    background-color: gray;
+}
+
+#log {
+    position: absolute;
+    background: white;
+    color: black;
+    left: 10px;
+    right: 15px;
+    top: 15px;
+    opacity: 0.85;
+    min-height: 3ex;
+    padding-right: 5em;
+    word-wrap: break-word;
+}
+
+#auxScreen {
+    opacity: 1.0;
+}
+
+canvas#focusedView {
+    opacity: 1.0;
+}
+
+canvas#overallView {
+    background: #D9ECFF;
+    position: absolute;
+    left: 168px;
+    top: 15px;
+}
+
+#mainScreenButton {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    margin-left: 0;
+    width: 150px;
+    height: 45px;
+}
+
+.field {
+    display: block;
+}
+
+.main_screen {
+    position: absolute;
+    left: 168px;
+    top: 70px;
+}
+
+.gui {
+    z-index: 2;
+    outline: 2px solid purple;
+    height: 55px;
+}
+
+.over_gui {
+    z-index: 3;
+}
+
