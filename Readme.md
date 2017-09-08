@@ -40,4 +40,7 @@ JavaFx client is fat.
 
 Example of UML 2 sequence diagram for Game Party [here](http://creately.com/diagram/j3uc19ok2/lPFFFxRSDGHGIgzNcsVcMks%3D).
 
+Video with the game: http://github.com/Tusenka/Tavlei/releases/download/master/TavleiDemoVideo.exe
+
+Zip files with the jars(server and client) - http://github.com/Tusenka/Tavlei/releases/download/master/Jars.zip
 
